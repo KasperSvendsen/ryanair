@@ -1,34 +1,36 @@
 # Ryanair Cheapest Round Trip Finder
 
-This project finds the cheapest round trips from a specified departure airport within a given date range and vacation length. The results are saved to an Excel file.
+This project helps you find the cheapest round trips from a specified departure airport within a given date range and vacation length. The results are saved to an Excel file.
 
 ## Features
-- Fetches possible destinations from a specified departure airport.
-- Finds the cheapest round trips within a given date range and vacation length.
-- Saves the results to an Excel file.
+
+- Fetch possible destinations from a given departure airport.
+- Find the cheapest round trips within a specified date range and vacation length.
+- Save the results to an Excel file.
 
 ## Requirements
-- Python 3.12+
-- `requests`
-- `openpyxl`
 
-## Setup
+- Python 3.x
+- Requests library
+- Openpyxl library
 
-1. **Clone the repository:**
+## Installation
 
-    ```sh
-    git clone https://github.com/yourusername/ryanair-cheapest-round-trip-finder.git
-    cd ryanair-cheapest-round-trip-finder
-    ```
-
-2. **Create a virtual environment:**
+1. Clone the repository:
 
     ```sh
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    git clone https://github.com/KasperSvendsen/ryanair.git
+    cd ryanair
     ```
 
-3. **Install dependencies:**
+2. Set up a virtual environment (optional but recommended):
+
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. Install the required libraries:
 
     ```sh
     pip install -r requirements.txt
@@ -36,25 +38,22 @@ This project finds the cheapest round trips from a specified departure airport w
 
 ## Usage
 
-1. **Modify the script parameters:**
-   Edit the configuration variables at the top of `run.py` to set your preferred departure airport, date range, vacation length, and currency.
+1. Update the configuration variables in `run.py` as needed:
 
     ```python
-    # Configuration variables
-    DEPARTURE_AIRPORT_CODE = 'CPH'  # Change to your departure airport code
-    START_DATE = '2024-09-01'       # Change to your start date
-    END_DATE = '2024-09-30'         # Change to your end date
-    MIN_VACATION_LENGTH = 4         # Change to your minimum vacation length in days
-    MAX_VACATION_LENGTH = 6         # Change to your maximum vacation length in days
-    CURRENCY = 'DKK'                # Change to your preferred currency
-    OUTPUT_FILE = 'cheapest_round_trips.xlsx'  # Output file name
+    DEPARTURE_AIRPORT_CODE = 'CPH'
+    START_DATE = '2024-09-01'
+    END_DATE = '2024-09-30'
+    MIN_VACATION_LENGTH = 4
+    MAX_VACATION_LENGTH = 6
+    CURRENCY = 'DKK'
+    OUTPUT_FILE = 'cheapest_round_trips.xlsx'
     ```
 
-2. **Run the script:**
+2. Run the script:
 
     ```sh
     python run.py
     ```
 
-3. **Check the results:**
-   The results will be saved in `cheapest_round_trips.xlsx` in the project directory.
+3. The results will be saved to the specified output file (e.g., `cheapest_round_trips.xlsx`).
